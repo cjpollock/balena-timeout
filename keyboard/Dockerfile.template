@@ -17,4 +17,4 @@ RUN cd keyboard && patch -p1 < keyboard.patch
 
 ENV PYTHONPATH="/usr/src/mydash/keyboard:${PYTHONPATH}"
 
-CMD python start.py #keyboard/examples/stdin_stdout_events.py
+CMD python start.py

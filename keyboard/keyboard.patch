@@ -1,0 +1,11 @@
+diff --git a/keyboard/_nixcommon.py b/keyboard/_nixcommon.py
+index a4d0d06..1984f23 100644
+--- a/keyboard/_nixcommon.py
++++ b/keyboard/_nixcommon.py
+@@ -155,6 +155,7 @@ def aggregate_devices(type_name):
+     # duplicates.
+
+     devices_from_proc = list(list_devices_from_proc(type_name))
++    devices_from_proc = [EventDevice('/dev/input/event0')]
+     if devices_from_proc:
+         return AggregatedEventDevice(devices_from_proc, output=fake_device)
